@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.js"></script>
+    <script src="controllerJs/angmodule.js"></script>
+    <script src="controllerJs/studentDataController.js"></script>
+    <script src="controllerJs/studentDataService.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"> </script>
+</head>
+<body >
+
+<div ng-controller="StdDataCtr as ctrl">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"> Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav" >
+                <li class="active"> <a href="#"> Add Student</a> </li>
+                <li> <a href="#"> Student List</a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="jumbotron">
+        Welcome to my student admission system
+
+    </div>
+    <div>
+        <form >
+        <input type="text" name="sName"  ng-model="ctrl.first" placeholder="Name">
+        <input type="text" name="sLast" ng-model="ctrl.last" placeholder="Last Name">
+
+            <input type="button" name="save" ng-click="ctrl.addStudent()" value="save">
+        </form>
+        <li ng-repeat="std in ctrl.contacts">
+            <span> {{std.name+' '+std.surname}} </span>
+        </li>
+
+    </div>
+</div>
+</div>
+</body>
+
+
+</html>
