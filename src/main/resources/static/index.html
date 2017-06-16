@@ -46,7 +46,7 @@
         <input type="text" name="sName"  ng-model="ctrl.first" placeholder="Name">
         <input type="text" name="sLast" ng-model="ctrl.last" placeholder="Last Name">
 
-            <input type="button" name="save" ng-click="ctrl.addStudent()" value="save">
+            <input type="button" name="save" ng-click="ctrl.saveSelected()" value="save">
         </form>
         <li ng-repeat="std in ctrl.contacts">
             <span> {{std.name+' '+std.surname}} </span>

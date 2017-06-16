@@ -21,7 +21,7 @@
         };
 
         self.saveUser=function (userData) {
-
+            console.log(userData);
             return $http.post('http://localhost:9090/students/',userData)
                 .then(function (response) {
                     console.log(response)
